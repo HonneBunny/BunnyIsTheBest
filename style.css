@@ -1,0 +1,99 @@
+/* cute-styles.css */
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive; /* Fun, playful fonts */
+    background-color: #ffe6f2; /* Soft pink background */
+    color: #ff69b4; /* Bubblegum pink text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Easy readability */
+    text-shadow: 1px 1px #ffc1e3, 0px 0px 5px #ffb6c1; /* Bright and cute glow */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="%23FFC1E3" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    background-repeat: repeat;
+    background-size: 50px 50px;
+    animation: hearts-move 10s linear infinite;
+    overflow-x: hidden; /* Prevents horizontal scroll from animation */
+}
+
+/* Animation for hearts to move diagonally */
+@keyframes hearts-move {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 500px 500px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacifico', cursive; /* Adorable cursive font for headers */
+    color: #ff85a2; /* Slightly darker pink */
+    text-align: center;
+    text-shadow: 2px 2px #ffb6c1, 0px 0px 10px #ff85a2, 2px 2px 5px #ffe6f2; /* Layered glow effect */
+}
+
+p {
+    font-size: 18px;
+    background-color: #fff0f5; /* Light pinkish white */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 2px 8px #ffc1e3; /* Soft shadow for a lifted look */
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+    text-shadow: 1px 1px #ffc1e3, 0px 0px 5px #ffe6f2; /* Gentle text shadow */
+}
+
+a {
+    color: #ff6ec7; /* Bright pink for links */
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px #ffb6c1, 0px 0px 5px #ff85a2; /* Glowy links */
+}
+
+a:hover {
+    color: #ff1493; /* Hot pink on hover */
+    text-decoration: underline;
+    text-shadow: 2px 2px #ff85a2, 0px 0px 8px #ff69b4; /* More intense glow */
+}
+
+ul {
+    list-style-type: '✨'; /* Sparkle bullet points */
+    padding-left: 20px;
+    color: #ff85a2; /* Pink list text */
+    text-shadow: 1px 1px #ffb6c1, 0px 0px 5px #ffe6f2; /* Glowy effect on list items */
+}
+
+button {
+    background-color: #ff69b4; /* Bubblegum pink button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded button */
+    font-size: 16px;
+    font-family: 'Comic Sans MS', cursive;
+    box-shadow: 2px 4px #ff85a2; /* Slight shadow */
+    text-shadow: 1px 1px #ffb6c1, 0px 0px 5px #ff69b4; /* Cute glowing text on button */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff85a2; /* Lighter pink on hover */
+    box-shadow: 2px 4px #ff69b4; /* Change shadow color */
+    text-shadow: 2px 2px #ff1493, 0px 0px 8px #ff85a2; /* Intense glow on hover */
+}
+
+input, textarea {
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff0f5;
+    font-family: 'Comic Sans MS', cursive;
+    color: #ff1493;
+    text-shadow: 1px 1px #ffc1e3, 0px 0px 5px #ff85a2; /* Glowy effect on input text */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff1493;
+    box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff85a2; /* Glowy border on focus */
+}
