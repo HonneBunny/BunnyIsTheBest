@@ -15,29 +15,19 @@
 
     <main>
         <section>
-            <h2>Why We Love Cuteness 💖</h2>
-            <p>
-                Cuteness brings smiles, makes hearts warm, and adds a sprinkle of happiness to everyday life. 
-                Whether it’s adorable animals, pastel colors, or just sweet words, there’s no end to what cuteness can do!
-            </p>
-            <ul>
-                <li>Adorable Animals 🐶🐱</li>
-                <li>Pastel Aesthetics 🎨</li>
-                <li>Wholesome Vibes 🌈</li>
-            </ul>
-        </section>
-
-        <section>
             <h2>Leave Us a Cute Message ✍️</h2>
-            <form>
-                <label for="name">Your Name:</label><br>
-                <input type="text" id="name" name="name" placeholder="e.g., Sparkle Unicorn"><br><br>
+            <div class="form-container">
+                <form id="cute-form">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="e.g., Sparkle Unicorn"><br><br>
 
-                <label for="message">Your Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="30" placeholder="Write your cutest thoughts here..."></textarea><br><br>
+                    <label for="message">Your Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="30" placeholder="Write your cutest thoughts here..."></textarea><br><br>
 
-                <button type="submit">Send Love 💌</button>
-            </form>
+                    <button type="button" id="send-btn">Send Love 💌</button>
+                </form>
+                
+            </div>
         </section>
     </main>
 
@@ -45,5 +35,7 @@
         <p>Made with 💕 by Cuteness Enthusiasts</p>
         <p>Follow us on <a href="#">Instagram</a> for daily doses of adorable! 🌟</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
