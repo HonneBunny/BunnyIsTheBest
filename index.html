@@ -6,6 +6,16 @@
     <title>Bunny Is The Best💕</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+         (function(){
+            emailjs.init({
+                publicKey: "5P1NgbkPhxTZwJdcE",
+            });
+        })();
+            
+    </script>
+
 </head>
 <body>
     <header>
@@ -14,6 +24,18 @@
     </header>
 
     <main>
+        <section>
+            <h2>Why We Love Cuteness 💖</h2>
+            <p>
+                Cuteness brings smiles, makes hearts warm, and adds a sprinkle of happiness to everyday life. 
+                Whether it’s adorable animals, pastel colors, or just sweet words, there’s no end to what cuteness can do!
+            </p>
+            <ul>
+                <li>Adorable Animals 🐶🐱</li>
+                <li>Pastel Aesthetics 🎨</li>
+                <li>Wholesome Vibes 🌈</li>
+            </ul>
+        </section>
         <section>
             <h2>Leave Us a Cute Message ✍️</h2>
             <div class="form-container">
@@ -26,7 +48,9 @@
 
                     <button type="button" id="send-btn">Send Love 💌</button>
                 </form>
-                
+                <p id="countdown-text">
+                    Open every 6 hours!
+                </p> <!-- Countdown text will go here -->
             </div>
         </section>
     </main>

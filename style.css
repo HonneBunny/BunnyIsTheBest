@@ -13,7 +13,9 @@ body {
     animation: hearts-move 10s linear infinite;
     overflow-x: hidden; /* Prevents horizontal scroll from animation */
 }
-
+section {
+    margin: 25px;
+}
 /* Animation for hearts to move diagonally */
 @keyframes hearts-move {
     from {
@@ -57,11 +59,22 @@ a:hover {
 }
 
 ul {
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically within the container */
     list-style-type: '✨'; /* Sparkle bullet points */
     padding-left: 20px;
     color: #ff85a2; /* Pink list text */
     text-shadow: 1px 1px #ffb6c1, 0px 0px 5px #ffe6f2; /* Glowy effect on list items */
+    margin: 0; /* Remove default margin */
 }
+
+li {
+    text-align: center; /* Ensure text is centered within each list item */
+    padding: 10px 0; /* Add some spacing around each list item */
+}
+
 
 button {
     background-color: #ff69b4; /* Bubblegum pink button */
@@ -98,16 +111,6 @@ input:focus, textarea:focus {
     box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff85a2; /* Glowy border on focus */
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Center the form */
 .form-container {
     display: flex;
@@ -119,38 +122,73 @@ input:focus, textarea:focus {
 }
 
 
-/* Heart style */
-/* Keyframes for heart explosion animation */
-@keyframes burst {
+
+
+
+/* Keyframes for the wrapper (move outward from the mouse) */
+@keyframes burst-wrapper {
     0% {
-        transform: scale(0) rotate(0deg); /* Start with scale 0 */
-        opacity: 1;
-        left: var(--mouse-x);
-        top: var(--mouse-y);  /* Start from cursor position */
+        transform: translate(0, 0); /* Start at mouse position */
+        opacity: 0; /* Fade in */
     }
     50% {
-        transform: scale(1) rotate(180deg); /* Heart grows and rotates */
-        opacity: 1;
-        left: calc(var(--mouse-x) + var(--random-x)); /* Randomize direction horizontally */
-        top: calc(var(--mouse-y) + var(--random-y));  /* Randomize direction vertically */
+        opacity: 1; /* Fully visible halfway through */
     }
     100% {
-        transform: scale(0) rotate(720deg); /* Shrink and rotate more */
-        opacity: 0;
-        left: calc(var(--mouse-x) + var(--random-x) * 2); /* Move further horizontally */
-        top: calc(var(--mouse-y) + var(--random-y) * 2);  /* Move further vertically */
+        transform: translate(var(--random-x), var(--random-y)); /* Move outward */
+        opacity: 0; /* Fade out */
     }
 }
 
-/* Heart style */
-.heart {
-    z-index: 99;
+/* Keyframes for the heart (rotate around its own center) */
+@keyframes rotate-heart {
+    0% {
+        transform: rotate(0deg); /* Start without rotation */
+        opacity: 0.8f; /* Fade in */
+    }
+    10% {
+        opacity: 1; /* Fully visible halfway through */
+    }
+    95% {
+        opacity: 1; /* Fully visible halfway through */
+    }
+    100% {
+        transform: rotate(720deg); /* Complete rotation */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Heart wrapper (moves the heart outward) */
+.heart-wrapper {
     position: absolute;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    pointer-events: none; /* Prevent hearts from interfering with interactions */
+}
+
+/* Heart style (rotates around its center) */
+.heart-inner {
     width: 30px;
     height: 30px;
     background-color: #ff85a2;
     clip-path: polygon(50% 0%, 61% 19%, 82% 19%, 100% 38%, 91% 61%, 50% 100%, 9% 61%, 0% 38%, 18% 19%, 39% 19%);
-    opacity: 0;
-    animation: burst 1.5s ease-out forwards;
-    transform-origin: center;
+    opacity: 1;
+    pointer-events: none; /* Prevent hearts from interfering with interactions */
+    transform-origin: center; /* Rotate from the center of each heart */
+}
+
+
+
+/* Add this to your CSS to style the countdown text */
+#countdown-text {
+    font-size: 16px;
+    color: #ff85a2;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
 }
